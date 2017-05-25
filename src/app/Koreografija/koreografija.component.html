@@ -1,0 +1,76 @@
+<div class="wrap">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tekst">
+                Vlaške igre su brze, dinamične i zanimljive igre.    <a href="https://www.youtube.com/watch?v=kNDrTYabmxE">Vlaske igre</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="slika">
+                <img class="slika1" onmouseover="s1()" src="http://www.spanac.rs/latinica/images/koreografije/97aa066dcc42404e7602768333af5659_XL.jpg"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 row">
+            <div class="tekst">
+                Ruske igre su vesele, brze i sa puno boja.         <a href="https://www.youtube.com/watch?v=lbJc8E8UBMw">Ruske igre</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="slika">
+                <img class = "dva" onmouseover="s2()" src="http://www.spanac.rs/latinica/images/koreografije/Rusi-03-XL.jpg"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="tekst">
+                Igre iz jugoistočne Srbije su odraz dinamične i jake igre.        <a href="https://www.youtube.com/watch?v=mtWybl_Mv_A">Bugarka</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 ">
+            <div class="slika">
+                <img class = "dva" onmouseover="s3()" src="http://www.spanac.rs/images/koreografije/Bugarka-03-XL.jpg"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 ">
+            <div class="tekst">
+                Bunjevačke igre su graciozne, spore i spajaju momke i devojke.     <a href="https://www.youtube.com/watch?v=hAZh5CcbcLk">Bunjevke</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 ">
+            <div class="slika">
+                <img class = "dva" onmouseover="s4()" src="http://www.spanac.rs/images/koreografije/Bunjevke-02-XL.jpg"/>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="dodajKoreo">
+        <p>Unsite koreografiju</p>
+        <form [formGroup]="dodajKoreo" class="forma">
+            <div class="form-group">
+                <p>Ime koreografije:</p>
+                <input type="text" class="form-control" formControlName='Ime'>
+            </div>
+            <div class="form-group">
+                <p>Koreograf:</p>
+                <input type="text" class="form-control" formControlName='Koreograf'>
+            </div>
+
+            <button (click)="dodajKoreografiju()" class="btn btn-default" style="margin-bottom: 10px;">Unesi</button>
+        </form>
+    </div>
+</div>

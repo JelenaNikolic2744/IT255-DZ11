@@ -1,0 +1,32 @@
+a:link,a:visited{color:#ff0}
+a:hover{color:#32cd32}
+.naslov{text-align:center;color:#fbf9f9;background-color: transparent;}
+.pozadina{background-image:url(https://lh6.googleusercontent.com/-b425GBInppc/UhNaTK5yK2I/AAAAAAAAABM/T__NLQa1eCw/w800-h800/Akademsko_Kulturno_Umetnicko_Drustvo_SPANAC_LOGO_250x250.jpg)}
+.pozadina .video{height:400px;width:510px;}
+.pozadina .nesto{text-align: center;padding: 10px;}
+.pozadina .spisak{height:45px;background:#444743;width:100%;border-radius:15px}
+.pozadina .spisak .spisak1{color:#fff;font-size:16px;display:inline-block;line-height:45px;text-align:center}
+.pozadina .wrap .pocetnaslika{text-align:center}
+.pozadina .wrap .pocetnaslika .slika{height:250px;width:610px;border:1px solid #fff}
+.pozadina .wrap .istorijat{border:10px solid #1e1e1e;margin-top:10px;border-radius:15px;color:#fff}
+.pozadina .wrap .row .tekst{text-align:center;color:#fff;}
+.pozadina .wrap .slika{text-align:center}
+.pozadina .wrap .slika .slika1{height:200px;width:310px;border:1px solid #fff}
+.pozadina .wrap .dva{height:200px;width:310px;margin-top:10px;border:1px solid #fff}
+.pozadina .wrap .koncert .centriraj{text-align: center}
+.pozadina .wrap .koncert1 .centriraj{text-align: center}
+.pozadina .wrap .img1{height:250px;margin-top:10px;;border:1px solid #fff}
+.pozadina .wrap .img3{height:250px;margin-top:25px;;border:1px solid #fff}
+.pozadina .wrap .img2{height:250px;margin-top:10px;;border:1px solid #fff}
+.pozadina .wrap .img4{height:250px;margin-top:25px;;border:1px solid #fff}
+.pozadina .wrap .forma{text-align:center;color:#fff; width: 300px; margin: 0 auto;}
+.pozadina .wrap .krajnjitekst{color:#fff}
+.pozadina .wrap .krajK{text-align:center;margin-top:100px}
+.pozadina .wrap .krajK .pocetna{height:200px;width:310px;margin-top:10px;border:1px solid #fff}
+.pozadina .wrap .kraj{text-align:center;margin-top:100px}
+.pozadina .wrap .kraj .pocetna{height:200px;width:310px;margin-top:10px;border:1px solid #fff}
+.pozadina .wrap .tabela1{color:#fff;border:2px solid #fff;margin-left:505px;text-align:center}
+.pozadina .wrap .tabela1 b{color:#fff}.pozadina .wrap .unos{text-align:center;margin-left:505px}
+.pozadina .wrap .dugme{text-align:center;margin-left:10px}
+.pozadina .wrap .koreokoreo{text-align: center; color: white}
+.pozadina .wrap .dodajKoreo{text-align: center; color: white}

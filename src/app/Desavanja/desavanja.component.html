@@ -1,0 +1,45 @@
+<div class="wrap">
+
+    <div class="row koncert">
+        <div class="col-md-6 centriraj">
+            <img class="img1" id="k1" onmouseover="m1()" src="http://www.spanac.rs/images/aktuelno/aktuelno-23-12-L.jpg"/>
+        </div>
+
+
+
+        <div class="col-md-6 centriraj">
+            <img class="img2" id="k2" onmouseover="m2()" src="http://www.spanac.rs/images/aktuelno/dan-drustva-2016-L.jpg"/>
+        </div>
+    </div>
+    <div class="row koncert1">
+        <div class="col-md-6 centriraj">
+            <img class="img3" id="k3" onmouseover="m3()" src="http://www.spanac.rs/images/aktuelno/audicija-2016-L.jpg"/>
+        </div>
+
+        <div class="col-md-6 centriraj">
+            <img class="img4" id="k4" onmouseover="m4()" src="http://www.spanac.rs/images/aktuelno/oprostaj-od-semestra-2016-L.jpg"/>
+        </div>
+    </div>
+
+    <div class="koreokoreo">
+        <p>Pronadjite koregorafiju koju zelite:</p>
+        <form class="navbar-form" role="search">
+            <div class="form-group">
+                <p>Pretrazite po imenu: </p>
+                <input type="text" class="form-control" placeholder="Search" name="Ime" [(ngModel)]="Ime">
+            </div>
+        </form>
+        <form class="navbar-form" role="search">
+            <div class="form-group">
+                <p>Pretraziti po koreografu: </p>
+                <input type="text" class="form-control" placeholder="Search" name="Koreograf" [(ngModel)]="Koreograf">
+            </div>
+        </form>
+        <div class="col-md-12">
+            <div *ngFor="let koreo of data | NadjiImeKoreografije:Ime | NadjiKoreoKoreo:Koreograf" class="Desavanja">
+                <p>Ime Koreografije :{{koreo.Ime}} <br>
+                    Koreograf : {{koreo.Koreograf}}</p>
+            </div>
+        </div>
+    </div>
+</div>
