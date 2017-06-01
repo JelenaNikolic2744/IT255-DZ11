@@ -11,6 +11,16 @@
         <div class="col-md-4 spisak1">
             <a class="a" routerLink="/kontakt">Prijava</a>
         </div>
+        <div class="col-md-4 spisak1">
+            <ng-container *ngIf="isAuth == 'no'"><a routerLink="/log">Login</a></ng-container>
+        </div>
+        <div class="col-md-4 spisak1">
+            <ng-container *ngIf="isAuth == 'no'"><a routerLink="/reg">Registruj se</a></ng-container>
+        </div>
+        <div class="col-md-4 spisak1">
+            <ng-container *ngIf="isAuth == 'yes'"><a (click)="izloguj()">Logout</a></ng-container>
+        </div>
+
     </div>
 </div>
 <router-outlet></router-outlet>

@@ -15,12 +15,16 @@ var pocetna_component_1 = require("./pocetna/pocetna.component");
 var koreografija_component_1 = require("./koreografija/koreografija.component");
 var desavanja_component_1 = require("./desavanja/desavanja.component");
 var kontakt_component_1 = require("./kontakt/kontakt.component");
+var logovanje_component_1 = require("./Logovanje/logovanje.component");
+var registracija_component_1 = require("./Registracija/registracija.component");
 var routes = [
     { path: '', redirectTo: '/pocetna', pathMatch: 'full' },
     { path: 'pocetna', component: pocetna_component_1.PocetnaComponent },
     { path: 'koreografija', component: koreografija_component_1.KoreografijaComponent },
     { path: 'desavanja', component: desavanja_component_1.DesavanjaComponent },
-    { path: 'kontakt', component: kontakt_component_1.KontaktComponent }
+    { path: 'kontakt', component: kontakt_component_1.KontaktComponent },
+    { path: 'log', component: logovanje_component_1.LoginComponent },
+    { path: 'reg', component: registracija_component_1.RegistracijaComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

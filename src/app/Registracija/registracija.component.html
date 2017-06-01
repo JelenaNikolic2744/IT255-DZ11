@@ -1,0 +1,14 @@
+<div id="content" class="container" class="reg" style="width: 430px">
+    <div class="row">
+        <form role="form" [formGroup]="forma" align="center" style="width: 430px" class="formal">
+            <h2>Registracija</h2>
+            <input type="text" formControlName='username' placeholder="Username"/>
+            <br>
+            <br>
+            <input type="password" formControlName='password' placeholder="Password"/>
+            <br>
+            <br>
+            <button (click)="reg()">Registruj se</button>
+        </form>
+    </div>
+</div>

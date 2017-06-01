@@ -8,13 +8,17 @@ import { PocetnaComponent } from './pocetna/pocetna.component';
 import { KoreografijaComponent } from './koreografija/koreografija.component';
 import { DesavanjaComponent } from './desavanja/desavanja.component';
 import { KontaktComponent} from './kontakt/kontakt.component';
+import { LoginComponent} from './Logovanje/logovanje.component';
+import {RegistracijaComponent} from './Registracija/registracija.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/pocetna', pathMatch: 'full'},
   { path: 'pocetna', component: PocetnaComponent},
   { path: 'koreografija', component: KoreografijaComponent},
   { path: 'desavanja', component: DesavanjaComponent},
-  { path: 'kontakt', component: KontaktComponent}
+  { path: 'kontakt', component: KontaktComponent},
+  { path: 'log', component: LoginComponent},
+  { path: 'reg', component: RegistracijaComponent}
 ]
 
 @NgModule ({

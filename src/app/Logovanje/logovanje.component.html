@@ -1,0 +1,14 @@
+<div id="content" class="container" class="log" style="width: 430px">
+    <div class="row">
+        <form role="form" [formGroup]="log" align="center" style="width: 430px" class="formal">
+            <h2>Ulogujte se</h2>
+            <input type="text" formControlName='username' placeholder="Username"/>
+            <br>
+            <br>
+            <input type="password" formControlName='password' placeholder="Password"/>
+            <br>
+            <br>
+            <button (click)="logovanje()">Login</button>
+        </form>
+    </div>
+</div>

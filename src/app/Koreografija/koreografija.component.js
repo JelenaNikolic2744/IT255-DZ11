@@ -20,24 +20,33 @@ var router_1 = require("@angular/router");
 var KoreografijaComponent = (function () {
     function KoreografijaComponent(http, router) {
         this.dodajKoreo = new forms_1.FormGroup({
-            Ime: new forms_1.FormControl(),
-            Koreograf: new forms_1.FormControl()
+            ime: new forms_1.FormControl(),
+            koreograf: new forms_1.FormControl()
         });
         this.http = http;
         this.router = router;
+        if (localStorage.getItem('token') == null) {
+            this.router.navigate(['']);
+        }
     }
     KoreografijaComponent.prototype.dodajKoreografiju = function () {
         var _this = this;
-        this.data = 'Ime=' + this.dodajKoreo.value.Ime + '&Koreograf=' + this.dodajKoreo.value.Koreograf;
+        alert('Nestp');
+        this.data = 'ime=' + this.dodajKoreo.value.ime + '&koreograf=' + this.dodajKoreo.value.koreograf;
         this.headers = new http_1.Headers();
+        this.headers.append('token', localStorage.getItem('token'));
         this.headers.append('Content-Type', 'application/x-www-form-urlencoded');
         this.http.post('http://localhost/php/dodaj.php', this.data, { headers: this.headers })
-            .subscribe(function (data) {
-            if (data['_body'] === 'ok') {
+            .map(function (res) { return res; })
+            .subscribe(function (data) { return _this.postResponse = data; }, function (err) { return alert(JSON.stringify(err)); }, function () {
+            if (_this.postResponse['_body'].indexOf('error') === -1) {
                 _this.router.navigate(['']);
             }
+            else {
+                alert('Greska');
+            }
         });
-        alert('Koreografija uneta :)');
+        alert('Uspesan unos koreografije!');
     };
     return KoreografijaComponent;
 }());

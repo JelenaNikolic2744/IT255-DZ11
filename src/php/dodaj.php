@@ -1,18 +1,14 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-require_once("konekcija.php");
+header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token , Authorization, Token, token, TOKEN');
+require_once("funkcije.php");
 
-if ( isset($_POST['name']) && isset($_POST['koreograf']) && isset($_POST['manufacturer'])) {
-    $name = $_POST['name'];
-	$price = $_POST['koreograf'];
 
-    $stmt = $con->prepare("INSERT INTO Koreografija (name, koreografija) VALUES (:name, :koreografija)");
-	$stmt->bindParam(":name", $name);
-    $stmt->bindParam(":koreografija", $koreografija);
-
-    $stmt->execute();
-    echo "Uspesno";
-
+if ( isset($_POST['Ime']) && isset($_POST['Koreograf'])) {
+    $name = $_POST['Ime'];
+	$koreograf = $_POST['Koreograf'];
+    echo dodajK($name, $koreograf);
+echo "nestp";
 }
 
 ?>
