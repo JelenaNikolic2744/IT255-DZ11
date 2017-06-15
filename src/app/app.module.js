@@ -21,6 +21,8 @@ var desavanja_koreoime_1 = require("./desavanja/desavanja-koreoime");
 var desavanja_koreokoreo_1 = require("./desavanja/desavanja-koreokoreo");
 var logovanje_component_1 = require("./Logovanje/logovanje.component");
 var registracija_component_1 = require("./Registracija/registracija.component");
+var koreoDetalji_component_1 = require("./koreoDetalji/koreoDetalji.component");
+var promeniKoreo_component_1 = require("./promeniKoreo/promeniKoreo.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -30,7 +32,8 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, app_routing_module_1.AppRoutingModule, http_1.HttpModule, forms_1.ReactiveFormsModule],
         declarations: [app_component_1.AppComponent, header_component_1.HeaderComponent, pocetna_component_1.PocetnaComponent, koreografija_component_1.KoreografijaComponent, desavanja_component_1.DesavanjaComponent,
-            kontakt_component_1.KontaktComponent, desavanja_koreoime_1.DesavanjaKoreoIme, desavanja_koreokoreo_1.DesavanjaKoreoKoreo, logovanje_component_1.LoginComponent, registracija_component_1.RegistracijaComponent],
+            kontakt_component_1.KontaktComponent, desavanja_koreoime_1.DesavanjaKoreoIme, desavanja_koreokoreo_1.DesavanjaKoreoKoreo, logovanje_component_1.LoginComponent, registracija_component_1.RegistracijaComponent,
+            koreoDetalji_component_1.KoreoDetaljiComponent, promeniKoreo_component_1.PromeniKoreoComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

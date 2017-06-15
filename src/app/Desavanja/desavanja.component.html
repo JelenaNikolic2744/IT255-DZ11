@@ -36,10 +36,29 @@
             </div>
         </form>
         <div class="col-md-12">
-            <div *ngFor="let koreo of data | NadjiImeKoreografije:Ime | NadjiKoreoKoreo:Koreograf" class="Desavanja">
-                <p>Ime Koreografije :{{koreo.Ime}} <br>
-                    Koreograf : {{koreo.Koreograf}}</p>
-            </div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th style="text-align: center">Ime</th>
+                    <th style="text-align: center">Koregoraf</th>
+                    <th style="text-align: center">Delete</th>
+                    <th style="text-align: center">Change</th>
+                    <th style="text-align: center">View</th>
+                </tr>
+                </thead>
+                <tbody>
+                <ng-container *ngFor="let koreo of data | NadjiImeKoreografije:ime | NadjiKoreoKoreo:koreograf">
+                    <tr>
+                        <td>{{koreo.Ime}}</td>
+                        <td>{{koreo.Koreograf}}</td>
+                        <td><button class="btn btn-danger" (click)="brisi($event, koreo.ID)">Brisi</button></td>
+                        <td><button class="btn btn-danger" (click)="promeniKoreo(koreo.ID)">Promeni</button></td>
+                        <td><button class="btn btn-default" (click)="uzmiKoreo(koreo.ID)">Detaljnije</button></td>
+                    </tr>
+                </ng-container>
+                </tbody>
+            </table>
         </div>
+
     </div>
 </div>

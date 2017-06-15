@@ -15,11 +15,14 @@ import { DesavanjaKoreoIme } from './desavanja/desavanja-koreoime';
 import { DesavanjaKoreoKoreo } from './desavanja/desavanja-koreokoreo';
 import { LoginComponent} from './Logovanje/logovanje.component';
 import {RegistracijaComponent} from './Registracija/registracija.component';
+import {KoreoDetaljiComponent} from './koreoDetalji/koreoDetalji.component';
+import {PromeniKoreoComponent} from './promeniKoreo/promeniKoreo.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpModule, ReactiveFormsModule ],
   declarations: [ AppComponent, HeaderComponent, PocetnaComponent, KoreografijaComponent, DesavanjaComponent,
-                  KontaktComponent, DesavanjaKoreoIme, DesavanjaKoreoKoreo, LoginComponent, RegistracijaComponent ],
+                  KontaktComponent, DesavanjaKoreoIme, DesavanjaKoreoKoreo, LoginComponent, RegistracijaComponent,
+                  KoreoDetaljiComponent, PromeniKoreoComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

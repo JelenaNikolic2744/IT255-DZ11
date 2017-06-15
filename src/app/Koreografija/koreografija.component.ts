@@ -33,8 +33,7 @@ export class KoreografijaComponent  {
     }
 
     dodajKoreografiju(): void {
-        alert('Nestp');
-        this.data = 'ime=' + this.dodajKoreo.value.ime + '&koreograf=' + this.dodajKoreo.value.koreograf;
+        this.data = 'Ime=' + this.dodajKoreo.value.ime + '&Koreograf=' + this.dodajKoreo.value.koreograf;
         this.headers = new Headers();
         this.headers.append('token', localStorage.getItem('token'));
         this.headers.append('Content-Type', 'application/x-www-form-urlencoded');

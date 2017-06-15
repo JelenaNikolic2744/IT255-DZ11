@@ -17,6 +17,8 @@ var desavanja_component_1 = require("./desavanja/desavanja.component");
 var kontakt_component_1 = require("./kontakt/kontakt.component");
 var logovanje_component_1 = require("./Logovanje/logovanje.component");
 var registracija_component_1 = require("./Registracija/registracija.component");
+var promeniKoreo_component_1 = require("./promeniKoreo/promeniKoreo.component");
+var koreoDetalji_component_1 = require("./koreoDetalji/koreoDetalji.component");
 var routes = [
     { path: '', redirectTo: '/pocetna', pathMatch: 'full' },
     { path: 'pocetna', component: pocetna_component_1.PocetnaComponent },
@@ -24,7 +26,9 @@ var routes = [
     { path: 'desavanja', component: desavanja_component_1.DesavanjaComponent },
     { path: 'kontakt', component: kontakt_component_1.KontaktComponent },
     { path: 'log', component: logovanje_component_1.LoginComponent },
-    { path: 'reg', component: registracija_component_1.RegistracijaComponent }
+    { path: 'reg', component: registracija_component_1.RegistracijaComponent },
+    { path: 'promeniKoreo/:id', component: promeniKoreo_component_1.PromeniKoreoComponent },
+    { path: 'koreoDetalji/:id', component: koreoDetalji_component_1.KoreoDetaljiComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

@@ -10,6 +10,8 @@ import { DesavanjaComponent } from './desavanja/desavanja.component';
 import { KontaktComponent} from './kontakt/kontakt.component';
 import { LoginComponent} from './Logovanje/logovanje.component';
 import {RegistracijaComponent} from './Registracija/registracija.component';
+import { PromeniKoreoComponent } from './promeniKoreo/promeniKoreo.component';
+import { KoreoDetaljiComponent } from './koreoDetalji/koreoDetalji.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/pocetna', pathMatch: 'full'},
@@ -18,7 +20,9 @@ const routes: Routes = [
   { path: 'desavanja', component: DesavanjaComponent},
   { path: 'kontakt', component: KontaktComponent},
   { path: 'log', component: LoginComponent},
-  { path: 'reg', component: RegistracijaComponent}
+  { path: 'reg', component: RegistracijaComponent},
+  { path: 'promeniKoreo/:id', component: PromeniKoreoComponent},
+  { path: 'koreoDetalji/:id', component: KoreoDetaljiComponent}
 ]
 
 @NgModule ({

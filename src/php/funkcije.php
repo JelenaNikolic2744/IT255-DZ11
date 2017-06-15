@@ -1,5 +1,8 @@
 <?php
 	include("konekcija.php");
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+     die();
+	}
 
 	function proveriLogovanje(){
 		global $con;
@@ -122,5 +125,61 @@
         header('HTTP/1.1 401 Unauthorized');
     }
     return json_encode($rarray);
-}
+    }
+        
+     function uzmiKoreo($id){
+        global $con;
+        $rarray = array();
+        if(proveriLogovanje()){
+			$result = $con->prepare("SELECT * FROM koreografije WHERE ID=:id");
+			$result->bindParam(":id", $id);
+			$result->execute();
+			while($row = $result->fetch()) {
+				$koreo = array();
+				$koreo['ID'] = $row['ID'];
+				$koreo['Ime'] = $row['Ime'];
+				$koreo['Koreograf'] = $row['Koreograf'];
+				
+			}
+			$rarray['red'] = $koreo;
+			return json_encode($rarray);
+		}
+	}
+
+    function brisi($id){
+        echo "nesto";
+        global $con;
+        $rarray = array();
+        if(proveriLogovanje()){
+            $result = $con->prepare("DELETE FROM koreografije WHERE ID=:id");
+            $result->bindParam(":id",$id);
+            $result->execute();
+            $rarray['uspeh'] = "Uspesno izbrisano";
+        }
+        else{
+            $rarray['error'] = "Ulogujte se";
+            header('HTTP/1.1 401 Unauthorized');
+        }
+        return json_encode($rarray);
+    }
+	
+	function promeniKoreo($id, $ime, $koreograf){
+    global $con;
+    $rarray = array();
+    if(proveriLogovanje()){
+		$stmt = $con->prepare("UPDATE koreografije SET Ime=:ime, Koreograf=:koreograf WHERE ID=:id");
+		$stmt->bindParam(":id", $id);
+		$stmt->bindParam(":ime", $ime);
+		$stmt->bindParam(":koreograf", $koreograf);
+        if($stmt->execute()){
+            $rarray['success'] = "yay";
+        }else{
+            $rarray['error'] = "Database connection error";
+        }
+    } else{
+        $rarray['error'] = "Ulogujte se";
+        header('HTTP/1.1 401 Unauthorized');
+    }
+    return json_encode($rarray);
+    }
 ?>

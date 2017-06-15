@@ -5,10 +5,10 @@ require_once("funkcije.php");
 
 
 if ( isset($_POST['Ime']) && isset($_POST['Koreograf'])) {
-    $name = $_POST['Ime'];
+    $ime = $_POST['Ime'];
 	$koreograf = $_POST['Koreograf'];
-    echo dodajK($name, $koreograf);
-echo "nestp";
+    echo dodajK($ime, $koreograf);
+echo "uspeh";
 }
 
 ?>

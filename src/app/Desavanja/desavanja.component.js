@@ -14,17 +14,37 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
+require("rxjs/Rx");
+var router_1 = require("@angular/router");
 var DesavanjaComponent = (function () {
-    function DesavanjaComponent(http) {
-        this.http = http;
-    }
-    DesavanjaComponent.prototype.ngOnInit = function () {
-        this.getData();
-    };
-    DesavanjaComponent.prototype.getData = function () {
+    function DesavanjaComponent(http, router) {
         var _this = this;
-        this.http.get('http://localhost/php/php.php')
-            .subscribe(function (res) { return _this.data = res.json(); });
+        this.http = http;
+        this.router = router;
+        this.headers = new http_1.Headers();
+        this.headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        this.headers.append('token', localStorage.getItem('token'));
+        http.get('http://localhost/php/desavanja.php', { headers: this.headers })
+            .map(function (res) { return res.json(); }).share()
+            .subscribe(function (data) {
+            _this.data = data;
+        }, function (err) {
+            _this.router.navigate(['./']);
+        });
+    }
+    DesavanjaComponent.prototype.brisi = function (event, item) {
+        this.headers = new http_1.Headers();
+        this.headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        this.headers.append('token', localStorage.getItem('token'));
+        this.http.get('http://localhost/php/brisi.php?ID=' + item, { headers: this.headers }).subscribe(function (data) {
+            event.srcElement.parentElement.parentElement.remove();
+        });
+    };
+    DesavanjaComponent.prototype.uzmiKoreo = function (item) {
+        this.router.navigate(['/koreoDetalji', item]);
+    };
+    DesavanjaComponent.prototype.promeniKoreo = function (item) {
+        this.router.navigate(['/promeniKoreo', item]);
     };
     return DesavanjaComponent;
 }());
@@ -33,7 +53,7 @@ DesavanjaComponent = __decorate([
         selector: 'desavanja',
         templateUrl: './desavanja.component.html'
     }),
-    __metadata("design:paramtypes", [http_1.Http])
+    __metadata("design:paramtypes", [http_1.Http, router_1.Router])
 ], DesavanjaComponent);
 exports.DesavanjaComponent = DesavanjaComponent;
 //# sourceMappingURL=desavanja.component.js.map

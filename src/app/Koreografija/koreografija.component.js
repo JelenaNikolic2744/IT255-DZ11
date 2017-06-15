@@ -31,8 +31,7 @@ var KoreografijaComponent = (function () {
     }
     KoreografijaComponent.prototype.dodajKoreografiju = function () {
         var _this = this;
-        alert('Nestp');
-        this.data = 'ime=' + this.dodajKoreo.value.ime + '&koreograf=' + this.dodajKoreo.value.koreograf;
+        this.data = 'Ime=' + this.dodajKoreo.value.ime + '&Koreograf=' + this.dodajKoreo.value.koreograf;
         this.headers = new http_1.Headers();
         this.headers.append('token', localStorage.getItem('token'));
         this.headers.append('Content-Type', 'application/x-www-form-urlencoded');
